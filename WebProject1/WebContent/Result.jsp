@@ -46,11 +46,18 @@ h3 {
 </style>
 <body bgcolor = "Yellow">
 <%		
+        String a;
 		String id = (String)session.getAttribute("id");	
 		String iname = (String)session.getAttribute("iname");	
 		String name = (String)session.getAttribute("name");	
 		String email = (String)session.getAttribute("email");	
 		String amt = (String)session.getAttribute("amt");	
+		String ai = (String)session.getAttribute("ai");
+		if(ai==null) {
+			a = "false";
+		}else{
+			a = "true";
+		}
 		
 	%>
 	
@@ -58,10 +65,10 @@ h3 {
 	<h3>Your bid is now active. If your bid is successful, you will be notified within 24 hours of the close of bidding.</h3>
 	
 	<div class="rectangle2"><%=iname %></div>
-	<div class="rectangle"><%out.print("Item ID: "+id);%></div>
+	<div class="rectangle"><%out.print("Item ID: "+id); %></div>
 	<div class="rectangle"><%out.print("Name: "+name); %></div>
 	<div class="rectangle"><%out.print("Email Address: "+email); %></div>
 	<div class="rectangle"><%out.print("Bid price: Rs."+amt); %></div>
-	<div class="rectangle"><%out.print("Auto-increment price: true"); %></div>
+	<div class="rectangle"><%out.print("Auto-increment price: "+ a); %></div>
 </body>
 </html>

@@ -27,13 +27,13 @@ form {
 
 <body bgcolor = #FFEFD5>
 	<form action="add" method="post">
-		Item ID: <input type="text" name="id" pattern="[A-Z-a-z-0-9]+"><br>
+		Item ID: <input type="text" name="id" pattern="[A-Z-0-9]+"><br>
 		Item Name: <input type="text" name="iname" pattern="[A-Z-a-z- -]+"><br>
 		Your Name: <input type="text" name="name" pattern="[A-Z-a-z- -]+"><br>
 		Your Email Address: <input type="text" name="email" pattern="[A-Z-a-z-@-0-9-.]+"><br>
 		Amount Bid: <input type="text" name="amt" pattern="[0-9]+"><br>
 		Auto-increment bid to match other bidders?: <input type="checkbox" id="myCheck" name="ai" value="true"><br>
-		<input type="submit">
+		<input name="Submit-Bid" type="submit" value="Submit Bid">
 	</form>
 </body>
 </html>

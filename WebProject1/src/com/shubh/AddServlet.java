@@ -20,22 +20,24 @@ public class AddServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-		String id=null, iname=null, name=null, email=null, amt=null;  
+		String id=null, iname=null, name=null, email=null, amt=null, ai=null;  
 		
 		id = req.getParameter("id");
 		iname = req.getParameter("iname");
 		name = req.getParameter("name");
 		email = req.getParameter("email");
 		amt = req.getParameter("amt");
-//		ai = req.getParameter("myCheck");
+		ai = req.getParameter("ai");
 		
 		
+
 		HttpSession session = req.getSession();
 		session.setAttribute("id", id);
 		session.setAttribute("iname", iname);
 		session.setAttribute("name", name);
 		session.setAttribute("email", email);
 		session.setAttribute("amt", amt);
+		session.setAttribute("ai", ai);
 		
 		if(id.isEmpty()==false && iname.isEmpty()==false && name.isEmpty()==false && email.isEmpty()==false && amt.isEmpty()==false){
 			RequestDispatcher rd = req.getRequestDispatcher("Result.jsp");
