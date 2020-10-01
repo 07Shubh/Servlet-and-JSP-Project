@@ -1,3 +1,3 @@
 # Servlet-and-JSP-Project
 ### Tech Involved
-Java, HTML
+Java, HTML. Apache Tomcat
